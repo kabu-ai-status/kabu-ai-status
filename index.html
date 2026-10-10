@@ -1,0 +1,51 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>株AI 稼働状況</title>
+<style>
+:root{--bg:#f6f6f3;--fg:#1b1b1b;--card:#fff;--mut:#666;--line:#ddd;--ok:#1d7a3a;--warn:#a26300;--ng:#b3261e}
+@media (prefers-color-scheme:dark){:root{--bg:#151515;--fg:#eee;--card:#222;--mut:#aaa;--line:#3a3a3a;--ok:#5fd07f;--warn:#f0b450;--ng:#ff8a80}}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 -apple-system,"Hiragino Sans",sans-serif;padding:max(12px,env(safe-area-inset-top)) 16px 40px}
+h1{font-size:20px;margin:4px 0} .muted{color:var(--mut);font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:10px 0}
+.band{border-radius:8px;padding:10px 12px;margin:10px 0;font-weight:600;background:var(--ng);color:#fff}
+.b{display:inline-block;border-radius:6px;padding:0 6px;font-size:13px;color:#fff} .OK{background:var(--ok)} .WARN{background:var(--warn)} .FAIL{background:var(--ng)}
+table{border-collapse:collapse;font-size:14px} td{padding:2px 10px 2px 0} ul{padding-left:20px;margin:6px 0;font-size:14px}
+button{font:inherit;padding:6px 14px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--fg)}
+</style></head><body>
+<h1>株AI 稼働状況</h1>
+<div class="muted">研究用システムの稼働状況のみ（銘柄・候補は掲載しません。投資助言ではありません）</div>
+<div id="stale" class="band" hidden></div>
+<p><button onclick="load(true)">最新に更新</button> <span id="fetched" class="muted"></span></p>
+<p class="muted"><b>この画面の生成: 2026-10-10 23:06:49 JST</b>（古い場合は「最新に更新」）</p>
+<div id="app"><div class=card><b>データ収集</b> <span class='b WARN'>WARN</span><div>最終完了 2026-10-10 19:10</div><div>株価データ最終日 2026-10-09 ・ 3714 銘柄</div><ul><li>取得間で値が修正された(code,date) 6 件（分割調整等。初回値は first_* に保持）</li></ul><table><tr><td>2026-10-10 18:30</td><td><span class='b WARN'>WARN</span></td></tr><tr><td>2026-10-10 07:30</td><td><span class='b WARN'>WARN</span></td></tr><tr><td>2026-10-09 18:30</td><td><span class='b WARN'>WARN</span></td></tr><tr><td>2026-10-09 07:30</td><td><span class='b WARN'>WARN</span></td></tr><tr><td>2026-10-08 21:21</td><td><span class='b WARN'>WARN</span></td></tr><tr><td>2026-10-08 20:52</td><td><span class='b WARN'>WARN</span></td></tr><tr><td>2026-10-08 18:30</td><td><span class='b WARN'>WARN</span></td></tr><tr><td>2026-10-08 07:30</td><td><span class='b WARN'>WARN</span></td></tr></table></div><div class=card><b>前向き検証</b><div>FWD1 確定 0/250 日</div><div>FWD2 確定 0/250 日（記録 0 日）</div></div><div class=card><b>モデル評価</b><div>v1.0系 C ・ M3 C ・ 正式採用 なし</div></div><div class=card><b>EDINET 取得</b><div>書類 残り 89614 件（前回 1500 件取得）</div></div><p class=muted>生成 2026-10-10 23:06:49 JST ・ 研究用システムの稼働状況です。投資助言・銘柄推奨ではありません。</p></div>
+<noscript><p class="muted">JavaScript が無効のため、生成時の内容を表示しています（古さの自動警告は表示されません）。</p></noscript>
+<script id="initial" type="application/json">{&quot;schema&quot;: &quot;kabu-ai-status/1&quot;, &quot;scope&quot;: &quot;P1（システム稼働状況のみ。銘柄・候補は掲載しません）&quot;, &quot;generated_at&quot;: &quot;2026-10-10 23:06:49&quot;, &quot;collector&quot;: {&quot;status&quot;: &quot;WARN&quot;, &quot;last_finished&quot;: &quot;2026-10-10 19:10&quot;, &quot;stale_hours_threshold&quot;: 15, &quot;issues&quot;: [], &quot;warnings&quot;: [&quot;取得間で値が修正された(code,date) 6 件（分割調整等。初回値は first_* に保持）&quot;], &quot;recent&quot;: [{&quot;at&quot;: &quot;2026-10-10 18:30&quot;, &quot;status&quot;: &quot;WARN&quot;}, {&quot;at&quot;: &quot;2026-10-10 07:30&quot;, &quot;status&quot;: &quot;WARN&quot;}, {&quot;at&quot;: &quot;2026-10-09 18:30&quot;, &quot;status&quot;: &quot;WARN&quot;}, {&quot;at&quot;: &quot;2026-10-09 07:30&quot;, &quot;status&quot;: &quot;WARN&quot;}, {&quot;at&quot;: &quot;2026-10-08 21:21&quot;, &quot;status&quot;: &quot;WARN&quot;}, {&quot;at&quot;: &quot;2026-10-08 20:52&quot;, &quot;status&quot;: &quot;WARN&quot;}, {&quot;at&quot;: &quot;2026-10-08 18:30&quot;, &quot;status&quot;: &quot;WARN&quot;}, {&quot;at&quot;: &quot;2026-10-08 07:30&quot;, &quot;status&quot;: &quot;WARN&quot;}]}, &quot;data&quot;: {&quot;price_last_date&quot;: &quot;2026-10-09&quot;, &quot;universe_codes&quot;: 3714}, &quot;forward&quot;: {&quot;FWD1&quot;: {&quot;matured&quot;: 0, &quot;required&quot;: 250}, &quot;FWD2&quot;: {&quot;matured&quot;: 0, &quot;required&quot;: 250, &quot;recorded&quot;: 0}}, &quot;models&quot;: {&quot;v10&quot;: &quot;C&quot;, &quot;M3&quot;: &quot;C&quot;, &quot;adopted&quot;: &quot;なし&quot;}, &quot;edinet&quot;: {&quot;docs_pending&quot;: 89614, &quot;docs_saved_last_run&quot;: 1500}, &quot;notice&quot;: &quot;研究用システムの稼働状況です。投資助言・銘柄推奨ではありません。&quot;, &quot;content_sha256&quot;: &quot;05d40b86df77141d6853136c468f7930d30e5ecc3caffcc83bf1a278d1049a30&quot;}</script>
+<script>
+function esc(s){return String(s==null?"—":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[c])}
+function hrs(t){return (Date.now()-new Date(t.replace(" ","T")+"+09:00"))/36e5}
+function show(s,src){
+ var c=s.collector,f=s.forward,warn=[];
+ var g=hrs(s.generated_at), lf=hrs(c.last_finished);
+ if(g>3) warn.push("ページの元データが "+g.toFixed(1)+" 時間前のものです（自動更新が止まっている可能性）");
+ if(lf>c.stale_hours_threshold) warn.push("データ収集の最終完了から "+lf.toFixed(1)+" 時間経過（基準 "+c.stale_hours_threshold+" 時間）");
+ if(c.status==="FAIL") warn.push("直近のデータ収集が失敗しています");
+ var b=document.getElementById("stale"); b.hidden=!warn.length; b.innerHTML=warn.map(esc).join("<br>");
+ document.getElementById("fetched").textContent=src;
+ var iss=(c.issues||[]).map(x=>"<li style='color:var(--ng)'>"+esc(x)+"</li>").join("")+(c.warnings||[]).map(x=>"<li>"+esc(x)+"</li>").join("");
+ document.getElementById("app").innerHTML=
+  "<div class=card><b>データ収集</b> <span class='b "+esc(c.status)+"'>"+esc(c.status)+"</span>"+
+  "<div>最終完了 "+esc(c.last_finished)+"（"+lf.toFixed(1)+" 時間前）</div><div>株価データ最終日 "+esc(s.data.price_last_date)+" ・ "+esc(s.data.universe_codes)+" 銘柄</div>"+
+  (iss?"<ul>"+iss+"</ul>":"")+"<table>"+c.recent.map(r=>"<tr><td>"+esc(r.at)+"</td><td><span class='b "+esc(r.status)+"'>"+esc(r.status)+"</span></td></tr>").join("")+"</table></div>"+
+  "<div class=card><b>前向き検証</b><div>FWD1 確定 "+esc(f.FWD1.matured)+"/"+esc(f.FWD1.required)+" 日</div><div>FWD2 確定 "+esc(f.FWD2.matured)+"/"+esc(f.FWD2.required)+" 日（記録 "+esc(f.FWD2.recorded)+" 日）</div></div>"+
+  "<div class=card><b>モデル評価</b><div>v1.0系 "+esc(s.models.v10)+" ・ M3 "+esc(s.models.M3)+" ・ 正式採用 "+esc(s.models.adopted)+"</div></div>"+
+  "<div class=card><b>EDINET 取得</b><div>書類 残り "+esc(s.edinet.docs_pending)+" 件（前回 "+esc(s.edinet.docs_saved_last_run)+" 件取得）</div></div>"+
+  "<p class=muted>生成 "+esc(s.generated_at)+" JST ・ "+esc(s.notice)+"</p>";
+}
+function load(force){
+ fetch("status.json?t="+Date.now(),{cache:"no-store"}).then(r=>{if(!r.ok)throw r.status;return r.json()})
+ .then(s=>show(s,"取得 "+new Date().toLocaleTimeString("ja-JP")))
+ .catch(e=>{show(JSON.parse(document.getElementById("initial").textContent),"最新データの取得に失敗（埋め込みの内容を表示）")});
+}
+show(JSON.parse(document.getElementById("initial").textContent),"埋め込み"); load(false);
+</script></body></html>

@@ -1,0 +1,74 @@
+{
+ "schema": "kabu-ai-status/1",
+ "scope": "P1（システム稼働状況のみ。銘柄・候補は掲載しません）",
+ "generated_at": "2026-10-10 23:06:49",
+ "collector": {
+  "status": "WARN",
+  "last_finished": "2026-10-10 19:10",
+  "stale_hours_threshold": 15,
+  "issues": [],
+  "warnings": [
+   "取得間で値が修正された(code,date) 6 件（分割調整等。初回値は first_* に保持）"
+  ],
+  "recent": [
+   {
+    "at": "2026-10-10 18:30",
+    "status": "WARN"
+   },
+   {
+    "at": "2026-10-10 07:30",
+    "status": "WARN"
+   },
+   {
+    "at": "2026-10-09 18:30",
+    "status": "WARN"
+   },
+   {
+    "at": "2026-10-09 07:30",
+    "status": "WARN"
+   },
+   {
+    "at": "2026-10-08 21:21",
+    "status": "WARN"
+   },
+   {
+    "at": "2026-10-08 20:52",
+    "status": "WARN"
+   },
+   {
+    "at": "2026-10-08 18:30",
+    "status": "WARN"
+   },
+   {
+    "at": "2026-10-08 07:30",
+    "status": "WARN"
+   }
+  ]
+ },
+ "data": {
+  "price_last_date": "2026-10-09",
+  "universe_codes": 3714
+ },
+ "forward": {
+  "FWD1": {
+   "matured": 0,
+   "required": 250
+  },
+  "FWD2": {
+   "matured": 0,
+   "required": 250,
+   "recorded": 0
+  }
+ },
+ "models": {
+  "v10": "C",
+  "M3": "C",
+  "adopted": "なし"
+ },
+ "edinet": {
+  "docs_pending": 89614,
+  "docs_saved_last_run": 1500
+ },
+ "notice": "研究用システムの稼働状況です。投資助言・銘柄推奨ではありません。",
+ "content_sha256": "05d40b86df77141d6853136c468f7930d30e5ecc3caffcc83bf1a278d1049a30"
+}
