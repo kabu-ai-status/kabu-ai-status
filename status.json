@@ -1,13 +1,14 @@
 {
  "schema": "kabu-ai-status/1",
  "scope": "P1（システム稼働状況のみ。銘柄・候補は掲載しません）",
- "generated_at": "2026-10-11 17:25:18",
+ "generated_at": "2026-10-11 19:26:04",
  "collector": {
   "status": "WARN",
-  "last_finished": "2026-10-11 08:15",
+  "last_finished": "2026-10-11 19:08",
   "stale_hours_threshold": 15,
   "issues": [],
   "warnings": [
+   "現上場銘柄の取得失敗 1 件: [銘柄コード省略]",
    "取得間で値が修正された(code,date) 6 件（分割調整等。初回値は first_* に保持）",
    "EDINET S100MGNN: zipでない応答",
    "EDINET S100MEGM: zipでない応答",
@@ -16,6 +17,10 @@
    "EDINET S100MEM8: zipでない応答"
   ],
   "recent": [
+   {
+    "at": "2026-10-11 18:30",
+    "status": "WARN"
+   },
    {
     "at": "2026-10-11 07:30",
     "status": "WARN"
@@ -43,10 +48,6 @@
    {
     "at": "2026-10-08 20:52",
     "status": "WARN"
-   },
-   {
-    "at": "2026-10-08 18:30",
-    "status": "WARN"
    }
   ]
  },
@@ -71,18 +72,23 @@
   "adopted": "なし"
  },
  "edinet": {
-  "docs_pending": 88164,
-  "docs_saved_last_run": 1410
+  "docs_pending": 86755,
+  "docs_saved_last_run": 1409
  },
  "notice": "研究用システムの稼働状況です。投資助言・銘柄推奨ではありません。",
  "health": {
-  "level": "注意",
+  "level": "異常",
   "market_today": "日曜",
   "last_trading_day": "2026-10-09",
   "next_trading_day": "2026-10-13",
   "expected_price_date": "2026-10-09",
   "price_freshness": "最新（以後は休場: 土曜・日曜）",
   "items": [
+   {
+    "category": "要確認",
+    "text": "現上場銘柄の取得失敗 1 件: [銘柄コード省略]",
+    "reason": "個別銘柄の株価取得失敗（うち廃止済み 0 件）"
+   },
    {
     "category": "情報",
     "text": "取得間で値が修正された(code,date) 6 件（分割調整等。初回値は first_* に保持）",
@@ -115,5 +121,5 @@
    }
   ]
  },
- "content_sha256": "a88d6f2911b9bd3f679a849d5241c769c8683b818359469dc52c2a4aefa4f462"
+ "content_sha256": "b7060aa98a3337f53126937d1f486091aa2c89d864efc510b24f336c13f6d23b"
 }
