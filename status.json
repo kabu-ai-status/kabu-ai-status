@@ -1,14 +1,13 @@
 {
  "schema": "kabu-ai-status/1",
  "scope": "P1（システム稼働状況のみ。銘柄・候補は掲載しません）",
- "generated_at": "2026-10-12 06:31:06",
+ "generated_at": "2026-10-12 08:31:59",
  "collector": {
   "status": "WARN",
-  "last_finished": "2026-10-11 19:08",
+  "last_finished": "2026-10-12 08:10",
   "stale_hours_threshold": 15,
   "issues": [],
   "warnings": [
-   "現上場銘柄の取得失敗 1 件: [銘柄コード省略]",
    "取得間で値が修正された(code,date) 6 件（分割調整等。初回値は first_* に保持）",
    "EDINET S100MGNN: zipでない応答",
    "EDINET S100MEGM: zipでない応答",
@@ -17,6 +16,10 @@
    "EDINET S100MEM8: zipでない応答"
   ],
   "recent": [
+   {
+    "at": "2026-10-12 07:30",
+    "status": "WARN"
+   },
    {
     "at": "2026-10-11 18:30",
     "status": "WARN"
@@ -44,10 +47,6 @@
    {
     "at": "2026-10-08 21:21",
     "status": "WARN"
-   },
-   {
-    "at": "2026-10-08 20:52",
-    "status": "WARN"
    }
   ]
  },
@@ -72,7 +71,7 @@
   "adopted": "なし"
  },
  "edinet": {
-  "docs_pending": 86755,
+  "docs_pending": 85346,
   "docs_saved_last_run": 1409
  },
  "notice": "研究用システムの稼働状況です。投資助言・銘柄推奨ではありません。",
@@ -84,11 +83,6 @@
   "expected_price_date": "2026-10-09",
   "price_freshness": "最新（以後は休場: 土曜・日曜・スポーツの日）",
   "items": [
-   {
-    "category": "注意",
-    "text": "現上場銘柄の取得失敗 1 件: [銘柄コード省略]",
-    "reason": "一時的な取得失敗 1 件（最新営業日の株価は保存済み。次回自動再取得）"
-   },
    {
     "category": "情報",
     "text": "取得間で値が修正された(code,date) 6 件（分割調整等。初回値は first_* に保持）",
@@ -121,5 +115,5 @@
    }
   ]
  },
- "content_sha256": "321ab4229c871e51d16b105d9636db7f39ce5a3fa68b25c2942878f5e8f6661f"
+ "content_sha256": "60f5f46befde742b95bbd429d67ca0ce2bca034f48740b26640e473698c964af"
 }
