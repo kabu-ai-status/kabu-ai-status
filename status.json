@@ -1,10 +1,10 @@
 {
  "schema": "kabu-ai-status/1",
  "scope": "P1（システム稼働状況のみ。銘柄・候補は掲載しません）",
- "generated_at": "2026-10-13 06:52:48",
+ "generated_at": "2026-10-13 08:53:36",
  "collector": {
   "status": "WARN",
-  "last_finished": "2026-10-12 21:22",
+  "last_finished": "2026-10-13 08:09",
   "stale_hours_threshold": 15,
   "issues": [],
   "warnings": [
@@ -16,6 +16,10 @@
    "EDINET S100MEM8: zipでない応答"
   ],
   "recent": [
+   {
+    "at": "2026-10-13 07:30",
+    "status": "WARN"
+   },
    {
     "at": "2026-10-12 18:30",
     "status": "WARN"
@@ -43,10 +47,6 @@
    {
     "at": "2026-10-09 18:30",
     "status": "WARN"
-   },
-   {
-    "at": "2026-10-09 07:30",
-    "status": "WARN"
    }
   ]
  },
@@ -71,7 +71,7 @@
   "adopted": "なし"
  },
  "edinet": {
-  "docs_pending": 83952,
+  "docs_pending": 82558,
   "docs_saved_last_run": 1394
  },
  "notice": "研究用システムの稼働状況です。投資助言・銘柄推奨ではありません。",
@@ -115,5 +115,5 @@
    }
   ]
  },
- "content_sha256": "2cd5d21eed977b333ccba8f1f63eefd32a1ba15bef1c39cf5a0420ba85a97c12"
+ "content_sha256": "d557300086014d834aba4994a5fa95784bcb95bc65bc575b7e220dc340879d46"
 }
