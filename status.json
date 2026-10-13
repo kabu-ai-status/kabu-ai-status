@@ -1,13 +1,14 @@
 {
  "schema": "kabu-ai-status/1",
  "scope": "P1（システム稼働状況のみ。銘柄・候補は掲載しません）",
- "generated_at": "2026-10-13 18:57:29",
+ "generated_at": "2026-10-13 19:58:10",
  "collector": {
   "status": "WARN",
-  "last_finished": "2026-10-13 08:09",
+  "last_finished": "2026-10-13 19:12",
   "stale_hours_threshold": 15,
   "issues": [],
   "warnings": [
+   "最新営業日 2026-10-13 のデータが無い銘柄 36 件（売買停止/出来高なし等）",
    "取得間で値が修正された(code,date) 6 件（分割調整等。初回値は first_* に保持）",
    "EDINET S100MGNN: zipでない応答",
    "EDINET S100MEGM: zipでない応答",
@@ -16,6 +17,10 @@
    "EDINET S100MEM8: zipでない応答"
   ],
   "recent": [
+   {
+    "at": "2026-10-13 18:30",
+    "status": "WARN"
+   },
    {
     "at": "2026-10-13 07:30",
     "status": "WARN"
@@ -43,15 +48,11 @@
    {
     "at": "2026-10-10 07:30",
     "status": "WARN"
-   },
-   {
-    "at": "2026-10-09 18:30",
-    "status": "WARN"
    }
   ]
  },
  "data": {
-  "price_last_date": "2026-10-09",
+  "price_last_date": "2026-10-13",
   "universe_codes": 3714
  },
  "forward": {
@@ -62,7 +63,7 @@
   "FWD2": {
    "matured": 0,
    "required": 250,
-   "recorded": 0
+   "recorded": 1
   }
  },
  "models": {
@@ -71,8 +72,8 @@
   "adopted": "なし"
  },
  "edinet": {
-  "docs_pending": 82558,
-  "docs_saved_last_run": 1394
+  "docs_pending": 81166,
+  "docs_saved_last_run": 1392
  },
  "notice": "研究用システムの稼働状況です。投資助言・銘柄推奨ではありません。",
  "health": {
@@ -80,9 +81,14 @@
   "market_today": "営業日",
   "last_trading_day": "2026-10-13",
   "next_trading_day": "2026-10-14",
-  "expected_price_date": "2026-10-09",
+  "expected_price_date": "2026-10-13",
   "price_freshness": "最新",
   "items": [
+   {
+    "category": "情報",
+    "text": "最新営業日 2026-10-13 のデータが無い銘柄 36 件（売買停止/出来高なし等）",
+    "reason": "売買停止・出来高なし等の個別銘柄（全体の5%未満）"
+   },
    {
     "category": "情報",
     "text": "取得間で値が修正された(code,date) 6 件（分割調整等。初回値は first_* に保持）",
@@ -115,5 +121,5 @@
    }
   ]
  },
- "content_sha256": "d557300086014d834aba4994a5fa95784bcb95bc65bc575b7e220dc340879d46"
+ "content_sha256": "84bb147a515e0e98417190d93ca04dfdd79e2b85cb5d575368b4f6b5007eea21"
 }
