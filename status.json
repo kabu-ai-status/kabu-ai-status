@@ -1,7 +1,7 @@
 {
  "schema": "kabu-ai-status/1",
  "scope": "P1（システム稼働状況のみ。銘柄・候補は掲載しません）",
- "generated_at": "2026-10-17 06:50:47",
+ "generated_at": "2026-10-17 07:52:29",
  "collector": {
   "status": "WARN",
   "last_finished": "2026-10-16 19:25",
@@ -98,7 +98,7 @@
    {
     "category": "情報",
     "text": "取得間で値が修正された(code,date) 6 件（分割調整等。初回値は first_* に保持）",
-    "reason": "上場廃止銘柄の株価遡及補正（株式併合等）6行。予測対象外・初回値は保持"
+    "reason": "上場廃止銘柄の株価遡及補正（株式併合等）5行。予測対象外・初回値は保持"
    },
    {
     "category": "注意",
@@ -127,5 +127,5 @@
    }
   ]
  },
- "content_sha256": "740f60830712dc6d6bccc6d5028cb3ee7a26b9f74efb2cede3297f6ce5637e23"
+ "content_sha256": "cc93a86e1450f81e7d46a93fe4b82d445ec76fab0882bdbf24ba1065528eb496"
 }
