@@ -1,16 +1,14 @@
 {
  "schema": "kabu-ai-status/1",
  "scope": "P1（システム稼働状況のみ。銘柄・候補は掲載しません）",
- "generated_at": "2026-10-17 07:52:29",
+ "generated_at": "2026-10-17 08:53:10",
  "collector": {
   "status": "WARN",
-  "last_finished": "2026-10-16 19:25",
+  "last_finished": "2026-10-17 08:19",
   "stale_hours_threshold": 15,
   "issues": [],
   "warnings": [
-   "OHLC不整合 1 行 (例 [銘柄コード省略]])",
-   "最新営業日 2026-10-16 のデータが無い銘柄 41 件（売買停止/出来高なし等）",
-   "取得間で値が修正された(code,date) 6 件（分割調整等。初回値は first_* に保持）",
+   "取得間で値が修正された(code,date) 5 件（分割調整等。初回値は first_* に保持）",
    "EDINET S100MGNN: zipでない応答",
    "EDINET S100MEGM: zipでない応答",
    "EDINET S100MGOT: zipでない応答",
@@ -18,6 +16,10 @@
    "EDINET S100MEM8: zipでない応答"
   ],
   "recent": [
+   {
+    "at": "2026-10-17 07:30",
+    "status": "WARN"
+   },
    {
     "at": "2026-10-16 18:30",
     "status": "WARN"
@@ -45,10 +47,6 @@
    {
     "at": "2026-10-13 18:30",
     "status": "WARN"
-   },
-   {
-    "at": "2026-10-13 07:30",
-    "status": "WARN"
    }
   ]
  },
@@ -73,12 +71,12 @@
   "adopted": "なし"
  },
  "edinet": {
-  "docs_pending": 73554,
+  "docs_pending": 72364,
   "docs_saved_last_run": 1384
  },
  "notice": "研究用システムの稼働状況です。投資助言・銘柄推奨ではありません。",
  "health": {
-  "level": "異常",
+  "level": "注意",
   "market_today": "土曜",
   "last_trading_day": "2026-10-16",
   "next_trading_day": "2026-10-19",
@@ -86,18 +84,8 @@
   "price_freshness": "最新（以後は休場: 土曜）",
   "items": [
    {
-    "category": "要確認",
-    "text": "OHLC不整合 1 行 (例 [銘柄コード省略]])",
-    "reason": "未分類の警告"
-   },
-   {
     "category": "情報",
-    "text": "最新営業日 2026-10-16 のデータが無い銘柄 41 件（売買停止/出来高なし等）",
-    "reason": "売買停止・出来高なし等の個別銘柄（全体の5%未満）"
-   },
-   {
-    "category": "情報",
-    "text": "取得間で値が修正された(code,date) 6 件（分割調整等。初回値は first_* に保持）",
+    "text": "取得間で値が修正された(code,date) 5 件（分割調整等。初回値は first_* に保持）",
     "reason": "上場廃止銘柄の株価遡及補正（株式併合等）5行。予測対象外・初回値は保持"
    },
    {
@@ -127,5 +115,5 @@
    }
   ]
  },
- "content_sha256": "cc93a86e1450f81e7d46a93fe4b82d445ec76fab0882bdbf24ba1065528eb496"
+ "content_sha256": "b61d7b38cc8d43018c40b1e8c3f4a728e8f44748569d7b45a16f33ef72d78f4c"
 }
