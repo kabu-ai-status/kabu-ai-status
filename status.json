@@ -1,14 +1,13 @@
 {
  "schema": "kabu-ai-status/1",
  "scope": "P1（システム稼働状況のみ。銘柄・候補は掲載しません）",
- "generated_at": "2026-10-20 06:15:52",
+ "generated_at": "2026-10-20 08:16:41",
  "collector": {
   "status": "WARN",
-  "last_finished": "2026-10-19 19:20",
+  "last_finished": "2026-10-20 08:14",
   "stale_hours_threshold": 15,
   "issues": [],
   "warnings": [
-   "最新営業日 2026-10-19 のデータが無い銘柄 45 件（売買停止/出来高なし等）",
    "取得間で値が修正された(code,date) 5 件（分割調整等。初回値は first_* に保持）",
    "EDINET S100MGNN: zipでない応答",
    "EDINET S100MEGM: zipでない応答",
@@ -17,6 +16,10 @@
    "EDINET S100MEM8: zipでない応答"
   ],
   "recent": [
+   {
+    "at": "2026-10-20 07:30",
+    "status": "WARN"
+   },
    {
     "at": "2026-10-19 18:30",
     "status": "WARN"
@@ -44,10 +47,6 @@
    {
     "at": "2026-10-16 18:30",
     "status": "WARN"
-   },
-   {
-    "at": "2026-10-16 07:30",
-    "status": "WARN"
    }
   ]
  },
@@ -72,7 +71,7 @@
   "adopted": "なし"
  },
  "edinet": {
-  "docs_pending": 66152,
+  "docs_pending": 64875,
   "docs_saved_last_run": 1382
  },
  "notice": "研究用システムの稼働状況です。投資助言・銘柄推奨ではありません。",
@@ -84,11 +83,6 @@
   "expected_price_date": "2026-10-19",
   "price_freshness": "最新",
   "items": [
-   {
-    "category": "情報",
-    "text": "最新営業日 2026-10-19 のデータが無い銘柄 45 件（売買停止/出来高なし等）",
-    "reason": "売買停止・出来高なし等の個別銘柄（全体の5%未満）"
-   },
    {
     "category": "情報",
     "text": "取得間で値が修正された(code,date) 5 件（分割調整等。初回値は first_* に保持）",
@@ -121,5 +115,5 @@
    }
   ]
  },
- "content_sha256": "cdb98f03b1e61b28ae949c64967546f279fe39cc28d704c9450c8e54d1a56592"
+ "content_sha256": "f88c99b819cdf7fe64ccdd4d175f57e82f508f6966529e1d2cc4caa4e5bcac82"
 }
