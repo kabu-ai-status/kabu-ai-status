@@ -1,0 +1,41 @@
+# 公開ページの鮮度監視（Mac が止まっていても GitHub 側で毎時実行。読み取りのみ・秘密情報なし・外部送信なし）
+name: watchdog
+on:
+  schedule:
+    - cron: "23 * * * *"
+  workflow_dispatch:
+  push:
+    paths: [".github/workflows/watchdog.yml"]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: status.json freshness
+        run: |
+          python3 - <<'PY'
+          import json, sys, time, datetime as dt, urllib.request
+          url = "https://kabu-ai-status.github.io/kabu-ai-status/status.json?t=%d" % time.time()
+          s = None
+          for i in range(3):
+              try:
+                  s = json.load(urllib.request.urlopen(url, timeout=30)); break
+              except Exception as e:
+                  print("fetch failed", i + 1, type(e).__name__); time.sleep(20)
+          if s is None:
+              print("::error::status.json を取得できない"); sys.exit(1)
+          gen = dt.datetime.fromisoformat(s["generated_at"].replace(" ", "T"))
+          now = dt.datetime.utcnow() + dt.timedelta(hours=9)
+          age = (now - gen).total_seconds() / 3600
+          v = s.get("verification", {})
+          print(f"generated_at={s['generated_at']} JST age_hours={age:.1f} verification={v.get('state')} health={s.get('health', {}).get('level')}")
+          bad = []
+          if age > 14:
+              bad.append(f"公開ページが {age:.1f} 時間更新されていない（Mac のスリープ・停止の可能性）")
+          if v.get("state") != "OK":
+              bad.append(f"前向き検証の集計: {v.get('state')} {v.get('reason', '')}")
+          if bad:
+              print("::error::" + " / ".join(bad)); sys.exit(1)
+          PY
