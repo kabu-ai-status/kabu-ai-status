@@ -4,8 +4,7 @@ on:
   schedule:
     - cron: "23 * * * *"
   workflow_dispatch:
-  push:
-    paths: [".github/workflows/watchdog.yml"]
+  # push では実行しない（2026-10-20 初回失敗: push 直後に走り、Pages 反映前の旧 status.json を読んだ）
 permissions:
   contents: read
 jobs:
