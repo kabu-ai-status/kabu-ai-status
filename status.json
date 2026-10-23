@@ -1,14 +1,14 @@
 {
  "schema": "kabu-ai-status/1",
  "scope": "P1（システム稼働状況のみ。銘柄・候補は掲載しません）",
- "generated_at": "2026-10-23 17:32:11",
+ "generated_at": "2026-10-23 19:33:11",
  "collector": {
   "status": "WARN",
-  "last_finished": "2026-10-23 08:14",
+  "last_finished": "2026-10-23 19:19",
   "stale_hours_threshold": 15,
   "issues": [],
   "warnings": [
-   "現上場銘柄の取得失敗 1 件: [銘柄コード省略]",
+   "最新営業日 2026-10-23 のデータが無い銘柄 35 件（売買停止/出来高なし等）",
    "取得間で値が修正された(code,date) 5 件（分割調整等。初回値は first_* に保持）",
    "EDINET S100MGNN: zipでない応答",
    "EDINET S100MEGM: zipでない応答",
@@ -17,6 +17,10 @@
    "EDINET S100MEM8: zipでない応答"
   ],
   "recent": [
+   {
+    "at": "2026-10-23 18:30",
+    "status": "WARN"
+   },
    {
     "at": "2026-10-23 07:30",
     "status": "WARN"
@@ -44,15 +48,11 @@
    {
     "at": "2026-10-20 07:30",
     "status": "WARN"
-   },
-   {
-    "at": "2026-10-19 18:30",
-    "status": "WARN"
    }
   ]
  },
  "data": {
-  "price_last_date": "2026-10-22",
+  "price_last_date": "2026-10-23",
   "universe_codes": 3714
  },
  "forward": {
@@ -63,7 +63,7 @@
   "FWD2": {
    "matured": 0,
    "required": 250,
-   "recorded": 8
+   "recorded": 9
   },
   "note": "20営業日保有の検証のため、最初の確定は FWD1 11/10・FWD2 11/12 の株価確定後（翌朝）。それまで 0 は正常（評価日未到来）"
  },
@@ -73,7 +73,7 @@
   "adopted": "なし"
  },
  "edinet": {
-  "docs_pending": 57220,
+  "docs_pending": 55838,
   "docs_saved_last_run": 1382
  },
  "notice": "研究用システムの稼働状況です。投資助言・銘柄推奨ではありません。",
@@ -418,13 +418,13 @@
   "market_today": "営業日",
   "last_trading_day": "2026-10-23",
   "next_trading_day": "2026-10-26",
-  "expected_price_date": "2026-10-22",
+  "expected_price_date": "2026-10-23",
   "price_freshness": "最新",
   "items": [
    {
-    "category": "注意",
-    "text": "現上場銘柄の取得失敗 1 件: [銘柄コード省略]",
-    "reason": "一時的な取得失敗 1 件（最新営業日の株価は保存済み。次回自動再取得）"
+    "category": "情報",
+    "text": "最新営業日 2026-10-23 のデータが無い銘柄 35 件（売買停止/出来高なし等）",
+    "reason": "売買停止・出来高なし等の個別銘柄（全体の5%未満）"
    },
    {
     "category": "情報",
@@ -458,5 +458,5 @@
    }
   ]
  },
- "content_sha256": "2986a9647967a7d0d37e8a7907fc48ee88a65a325154bab698654191300df4dc"
+ "content_sha256": "8f77e0c9d174818b8f6ce7da6027862137f3f51f0083793ccbb7f4160ca720f9"
 }
