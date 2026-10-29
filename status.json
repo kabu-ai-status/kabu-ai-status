@@ -1,14 +1,16 @@
 {
  "schema": "kabu-ai-status/1",
  "scope": "P1（システム稼働状況のみ。銘柄・候補は掲載しません）",
- "generated_at": "2026-10-29 18:33:48",
+ "generated_at": "2026-10-29 19:34:29",
  "collector": {
   "status": "WARN",
-  "last_finished": "2026-10-29 08:08",
+  "last_finished": "2026-10-29 19:14",
   "stale_hours_threshold": 15,
   "issues": [],
   "warnings": [
-   "取得間で値が修正された(code,date) 8 件（分割調整等。初回値は first_* に保持）",
+   "現上場銘柄の取得失敗 1 件: [銘柄コード省略]",
+   "最新営業日 2026-10-29 のデータが無い銘柄 63 件（売買停止/出来高なし等）",
+   "取得間で値が修正された(code,date) 23 件（分割調整等。初回値は first_* に保持）",
    "EDINET S100MGNN: zipでない応答",
    "EDINET S100MEGM: zipでない応答",
    "EDINET S100MGOT: zipでない応答",
@@ -16,6 +18,10 @@
    "EDINET S100MEM8: zipでない応答"
   ],
   "recent": [
+   {
+    "at": "2026-10-29 18:30",
+    "status": "WARN"
+   },
    {
     "at": "2026-10-29 07:30",
     "status": "WARN"
@@ -43,15 +49,11 @@
    {
     "at": "2026-10-26 07:30",
     "status": "WARN"
-   },
-   {
-    "at": "2026-10-25 18:30",
-    "status": "WARN"
    }
   ]
  },
  "data": {
-  "price_last_date": "2026-10-28",
+  "price_last_date": "2026-10-29",
   "universe_codes": 3714
  },
  "forward": {
@@ -62,7 +64,7 @@
   "FWD2": {
    "matured": 0,
    "required": 250,
-   "recorded": 12
+   "recorded": 13
   },
   "note": "20営業日保有の検証のため、最初の確定は FWD1 11/10・FWD2 11/12 の株価確定後（翌朝）。それまで 0 は正常（評価日未到来）"
  },
@@ -72,7 +74,7 @@
   "adopted": "なし"
  },
  "edinet": {
-  "docs_pending": 41406,
+  "docs_pending": 40025,
   "docs_saved_last_run": 1381
  },
  "notice": "研究用システムの稼働状況です。投資助言・銘柄推奨ではありません。",
@@ -417,13 +419,23 @@
   "market_today": "営業日",
   "last_trading_day": "2026-10-29",
   "next_trading_day": "2026-10-30",
-  "expected_price_date": "2026-10-28",
+  "expected_price_date": "2026-10-29",
   "price_freshness": "最新",
   "items": [
    {
     "category": "要確認",
-    "text": "取得間で値が修正された(code,date) 8 件（分割調整等。初回値は first_* に保持）",
-    "reason": "現上場銘柄の株価修正 3行（分割以外の可能性）"
+    "text": "現上場銘柄の取得失敗 1 件: [銘柄コード省略]",
+    "reason": "個別銘柄の株価取得失敗（うち廃止済み 0 件）"
+   },
+   {
+    "category": "情報",
+    "text": "最新営業日 2026-10-29 のデータが無い銘柄 63 件（売買停止/出来高なし等）",
+    "reason": "売買停止・出来高なし等の個別銘柄（全体の5%未満）"
+   },
+   {
+    "category": "要確認",
+    "text": "取得間で値が修正された(code,date) 23 件（分割調整等。初回値は first_* に保持）",
+    "reason": "現上場銘柄の株価修正 18行（分割以外の可能性）"
    },
    {
     "category": "注意",
@@ -452,5 +464,5 @@
    }
   ]
  },
- "content_sha256": "89f33fac23f18be2598a6b9d9fbde4c2e0fc572a14231bbfe02691045f6661a2"
+ "content_sha256": "146ce29ea7a9a0ced3252154510c04ed1a175f886aaf1c3bdb8f793610386d06"
 }
