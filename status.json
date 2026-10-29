@@ -1,7 +1,7 @@
 {
  "schema": "kabu-ai-status/1",
  "scope": "P1（システム稼働状況のみ。銘柄・候補は掲載しません）",
- "generated_at": "2026-10-29 12:30:23",
+ "generated_at": "2026-10-29 14:31:41",
  "collector": {
   "status": "WARN",
   "last_finished": "2026-10-29 08:08",
