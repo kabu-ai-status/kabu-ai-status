@@ -1,7 +1,7 @@
 {
  "schema": "kabu-ai-status/1",
  "scope": "P1（システム稼働状況のみ。銘柄・候補は掲載しません）",
- "generated_at": "2026-11-02 23:48:40",
+ "generated_at": "2026-11-03 00:50:41",
  "collector": {
   "status": "FAIL",
   "last_finished": "2026-11-02 19:13",
@@ -78,11 +78,11 @@
   "final": null,
   "note": "模擬（仮想）損益。実際の売買損益は0円。翌営業日寄り買い・1日目/5日目引け売り・コストv2控除。",
   "state": "更新失敗／検証中",
-  "reason": "株価の確定が 3 営業日遅れている"
+  "reason": "株価の確定が 4 営業日遅れている"
  },
  "health": {
   "level": "異常",
-  "market_today": "営業日",
+  "market_today": "文化の日",
   "last_trading_day": "2026-11-02",
   "next_trading_day": "2026-11-04",
   "expected_price_date": "2026-11-02",
@@ -95,5 +95,5 @@
    }
   ]
  },
- "content_sha256": "b8805cd4afbf1447f8a0c80d1f24f97f68b7928c76b1d15c173106d2bb9ca9d4"
+ "content_sha256": "f7e4873fe49e658c76373524860882e31d04024236672ec45ce8ac021ee8b2bc"
 }
