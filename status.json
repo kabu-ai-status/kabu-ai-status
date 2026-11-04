@@ -1,13 +1,15 @@
 {
  "schema": "kabu-ai-status/1",
  "scope": "P1（システム稼働状況のみ。銘柄・候補は掲載しません）",
- "generated_at": "2026-11-04 17:15:49",
+ "generated_at": "2026-11-04 19:17:07",
  "collector": {
   "status": "WARN",
-  "last_finished": "2026-11-04 08:17",
+  "last_finished": "2026-11-04 19:14",
   "stale_hours_threshold": 15,
   "issues": [],
   "warnings": [
+   "現上場銘柄の取得失敗 1 件: [銘柄コード省略]",
+   "最新営業日 2026-11-04 のデータが無い銘柄 20 件（売買停止/出来高なし等）",
    "取得間で値が修正された(code,date) 23 件（分割調整等。初回値は first_* に保持）",
    "EDINET S100MGNN: zipでない応答",
    "EDINET S100MEGM: zipでない応答",
@@ -16,6 +18,10 @@
    "EDINET S100MEM8: zipでない応答"
   ],
   "recent": [
+   {
+    "at": "2026-11-04 18:30",
+    "status": "WARN"
+   },
    {
     "at": "2026-11-04 07:30",
     "status": "WARN"
@@ -43,15 +49,11 @@
    {
     "at": "2026-10-31 18:30",
     "status": "FAIL"
-   },
-   {
-    "at": "2026-10-31 07:53",
-    "status": "FAIL"
    }
   ]
  },
  "data": {
-  "price_last_date": "2026-11-02",
+  "price_last_date": "2026-11-04",
   "universe_codes": 3714
  },
  "forward": {
@@ -62,7 +64,7 @@
   "FWD2": {
    "matured": 0,
    "required": 250,
-   "recorded": 15
+   "recorded": 16
   },
   "note": "20営業日保有の検証のため、最初の確定は FWD1 11/10・FWD2 11/12 の株価確定後（翌朝）。それまで 0 は正常（評価日未到来）"
  },
@@ -72,7 +74,7 @@
   "adopted": "なし"
  },
  "edinet": {
-  "docs_pending": 36430,
+  "docs_pending": 35049,
   "docs_saved_last_run": 1381
  },
  "notice": "研究用システムの稼働状況です。投資助言・銘柄推奨ではありません。",
@@ -90,9 +92,19 @@
   "market_today": "営業日",
   "last_trading_day": "2026-11-04",
   "next_trading_day": "2026-11-05",
-  "expected_price_date": "2026-11-02",
+  "expected_price_date": "2026-11-04",
   "price_freshness": "最新",
   "items": [
+   {
+    "category": "要確認",
+    "text": "現上場銘柄の取得失敗 1 件: [銘柄コード省略]",
+    "reason": "個別銘柄の株価取得失敗（うち廃止済み 0 件）"
+   },
+   {
+    "category": "情報",
+    "text": "最新営業日 2026-11-04 のデータが無い銘柄 20 件（売買停止/出来高なし等）",
+    "reason": "売買停止・出来高なし等の個別銘柄（全体の5%未満）"
+   },
    {
     "category": "要確認",
     "text": "取得間で値が修正された(code,date) 23 件（分割調整等。初回値は first_* に保持）",
@@ -125,5 +137,5 @@
    }
   ]
  },
- "content_sha256": "b420c8ef0593a8540c86a5ae4a5110d9555789136e898314d3d5da598cb0c70f"
+ "content_sha256": "d7785ee4c4dcae9b36d5b5b43a557bf374a48b6e178f388953a0234c57c3389e"
 }
