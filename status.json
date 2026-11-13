@@ -1,7 +1,7 @@
 {
  "schema": "kabu-ai-status/1",
  "scope": "P1（システム稼働状況のみ。銘柄・候補は掲載しません）",
- "generated_at": "2026-11-13 23:23:45",
+ "generated_at": "2026-11-14 00:24:28",
  "collector": {
   "status": "WARN",
   "last_finished": "2026-11-13 19:14",
@@ -84,7 +84,7 @@
   "final": null,
   "note": "模擬（仮想）損益。実際の売買損益は0円。翌営業日寄り買い・1日目/5日目引け売り・コストv2控除。",
   "state": "OK",
-  "reason": "株価確定日 2026-11-12 時点",
+  "reason": "株価確定日 2026-11-12 時点（1営業日遅れ）",
   "rows": [
    {
     "name": "新S",
@@ -428,11 +428,11 @@
  },
  "health": {
   "level": "注意",
-  "market_today": "営業日",
+  "market_today": "土曜",
   "last_trading_day": "2026-11-13",
   "next_trading_day": "2026-11-16",
   "expected_price_date": "2026-11-13",
-  "price_freshness": "最新",
+  "price_freshness": "最新（以後は休場: 土曜）",
   "items": [
    {
     "category": "情報",
@@ -471,5 +471,5 @@
    }
   ]
  },
- "content_sha256": "74711f9345e035c60f135d2fa9db57b6f08677212b3919b6052ae451ca971c87"
+ "content_sha256": "24968bf9c1a3523bc5cb3a32b9d8c6e6ae5ddee4367bcd6a787df8d4eb369679"
 }
