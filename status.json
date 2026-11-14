@@ -1,7 +1,7 @@
 {
  "schema": "kabu-ai-status/1",
  "scope": "P1（システム稼働状況のみ。銘柄・候補は掲載しません）",
- "generated_at": "2026-11-14 23:34:31",
+ "generated_at": "2026-11-15 00:35:11",
  "collector": {
   "status": "WARN",
   "last_finished": "2026-11-14 19:15",
@@ -427,11 +427,11 @@
  },
  "health": {
   "level": "注意",
-  "market_today": "土曜",
+  "market_today": "日曜",
   "last_trading_day": "2026-11-13",
   "next_trading_day": "2026-11-16",
   "expected_price_date": "2026-11-13",
-  "price_freshness": "最新（以後は休場: 土曜）",
+  "price_freshness": "最新（以後は休場: 土曜・日曜）",
   "items": [
    {
     "category": "注意",
@@ -465,5 +465,5 @@
    }
   ]
  },
- "content_sha256": "f7dc441e99a913de6ffe9748a071932e8718f22ac24603f25dcb17dde9c10d5b"
+ "content_sha256": "d24a3ab4f26513c8db903ae790b12ef44a9444f6377dea94eafd1bbc8fe2b957"
 }
