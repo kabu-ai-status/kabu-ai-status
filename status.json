@@ -1,21 +1,26 @@
 {
  "schema": "kabu-ai-status/1",
  "scope": "P1（システム稼働状況のみ。銘柄・候補は掲載しません）",
- "generated_at": "2026-11-18 19:03:02",
+ "generated_at": "2026-11-18 20:03:44",
  "collector": {
   "status": "WARN",
-  "last_finished": "2026-11-18 08:18",
+  "last_finished": "2026-11-18 19:19",
   "stale_hours_threshold": 15,
   "issues": [],
   "warnings": [
+   "OHLC不整合 2 行 (例 [銘柄コード省略], [銘柄コード省略]])",
+   "最新営業日 2026-11-18 のデータが無い銘柄 38 件（売買停止/出来高なし等）",
    "取得間で値が修正された(code,date) 28 件（分割調整等。初回値は first_* に保持）",
    "EDINET S100MGNN: zipでない応答",
    "EDINET S100MEGM: zipでない応答",
    "EDINET S100MGOT: zipでない応答",
-   "EDINET S100MIZT: zipでない応答",
-   "EDINET S100MEM8: zipでない応答"
+   "EDINET S"
   ],
   "recent": [
+   {
+    "at": "2026-11-18 18:30",
+    "status": "WARN"
+   },
    {
     "at": "2026-11-18 07:30",
     "status": "WARN"
@@ -43,26 +48,22 @@
    {
     "at": "2026-11-15 07:30",
     "status": "WARN"
-   },
-   {
-    "at": "2026-11-14 18:30",
-    "status": "WARN"
    }
   ]
  },
  "data": {
-  "price_last_date": "2026-11-17",
+  "price_last_date": "2026-11-18",
   "universe_codes": 3719
  },
  "forward": {
   "FWD1": {
-   "matured": 6,
+   "matured": 7,
    "required": 250
   },
   "FWD2": {
    "matured": 0,
    "required": 250,
-   "recorded": 25
+   "recorded": 26
   },
   "note": "20営業日保有の検証のため、最初の確定は FWD1 11/10・FWD2 11/12 の株価確定後（翌朝）。それまで 0 は正常（評価日未到来）"
  },
@@ -72,7 +73,7 @@
   "adopted": "なし"
  },
  "edinet": {
-  "docs_pending": 1635,
+  "docs_pending": 256,
   "docs_saved_last_run": 1379
  },
  "notice": "研究用システムの稼働状況です。投資助言・銘柄推奨ではありません。",
@@ -426,13 +427,23 @@
   ]
  },
  "health": {
-  "level": "注意",
+  "level": "異常",
   "market_today": "営業日",
   "last_trading_day": "2026-11-18",
   "next_trading_day": "2026-11-19",
-  "expected_price_date": "2026-11-17",
+  "expected_price_date": "2026-11-18",
   "price_freshness": "最新",
   "items": [
+   {
+    "category": "要確認",
+    "text": "OHLC不整合 2 行 (例 [銘柄コード省略], [銘柄コード省略]])",
+    "reason": "未分類の警告"
+   },
+   {
+    "category": "情報",
+    "text": "最新営業日 2026-11-18 のデータが無い銘柄 38 件（売買停止/出来高なし等）",
+    "reason": "売買停止・出来高なし等の個別銘柄（全体の5%未満）"
+   },
    {
     "category": "注意",
     "text": "取得間で値が修正された(code,date) 28 件（分割調整等。初回値は first_* に保持）",
@@ -454,16 +465,11 @@
     "reason": "EDINET が書類本文を提供していない（404）。保存せず次回再試行。株価データ・予測には影響なし"
    },
    {
-    "category": "注意",
-    "text": "EDINET S100MIZT: zipでない応答",
-    "reason": "EDINET が書類本文を提供していない（404）。保存せず次回再試行。株価データ・予測には影響なし"
-   },
-   {
-    "category": "注意",
-    "text": "EDINET S100MEM8: zipでない応答",
-    "reason": "EDINET が書類本文を提供していない（404）。保存せず次回再試行。株価データ・予測には影響なし"
+    "category": "要確認",
+    "text": "EDINET S",
+    "reason": "未分類の警告"
    }
   ]
  },
- "content_sha256": "c324d4a9ba423bff5970175bb51c52d2a4a45afa8d6ff275e43a7c5aec80472e"
+ "content_sha256": "d5c24325eb806df9b0533d82309fa9572b3f6fb5ebfde06cf525b87931827e21"
 }
