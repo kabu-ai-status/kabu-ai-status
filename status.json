@@ -1,22 +1,25 @@
 {
  "schema": "kabu-ai-status/1",
  "scope": "P1（システム稼働状況のみ。銘柄・候補は掲載しません）",
- "generated_at": "2026-11-19 06:07:46",
+ "generated_at": "2026-11-19 08:08:33",
  "collector": {
   "status": "WARN",
-  "last_finished": "2026-11-18 19:19",
+  "last_finished": "2026-11-19 07:50",
   "stale_hours_threshold": 15,
   "issues": [],
   "warnings": [
-   "OHLC不整合 2 行 (例 [銘柄コード省略], [銘柄コード省略]])",
-   "最新営業日 2026-11-18 のデータが無い銘柄 38 件（売買停止/出来高なし等）",
-   "取得間で値が修正された(code,date) 28 件（分割調整等。初回値は first_* に保持）",
+   "取得間で値が修正された(code,date) 29 件（分割調整等。初回値は first_* に保持）",
    "EDINET S100MGNN: zipでない応答",
    "EDINET S100MEGM: zipでない応答",
    "EDINET S100MGOT: zipでない応答",
-   "EDINET S"
+   "EDINET S100MIZT: zipでない応答",
+   "EDINET S100MEM8: zipでない応答"
   ],
   "recent": [
+   {
+    "at": "2026-11-19 07:30",
+    "status": "WARN"
+   },
    {
     "at": "2026-11-18 18:30",
     "status": "WARN"
@@ -44,10 +47,6 @@
    {
     "at": "2026-11-15 18:30",
     "status": "WARN"
-   },
-   {
-    "at": "2026-11-15 07:30",
-    "status": "WARN"
    }
   ]
  },
@@ -73,8 +72,8 @@
   "adopted": "なし"
  },
  "edinet": {
-  "docs_pending": 256,
-  "docs_saved_last_run": 1379
+  "docs_pending": 121,
+  "docs_saved_last_run": 295
  },
  "notice": "研究用システムの稼働状況です。投資助言・銘柄推奨ではありません。",
  "verification": {
@@ -427,7 +426,7 @@
   ]
  },
  "health": {
-  "level": "異常",
+  "level": "注意",
   "market_today": "営業日",
   "last_trading_day": "2026-11-19",
   "next_trading_day": "2026-11-20",
@@ -435,19 +434,9 @@
   "price_freshness": "最新",
   "items": [
    {
-    "category": "要確認",
-    "text": "OHLC不整合 2 行 (例 [銘柄コード省略], [銘柄コード省略]])",
-    "reason": "未分類の警告"
-   },
-   {
-    "category": "情報",
-    "text": "最新営業日 2026-11-18 のデータが無い銘柄 38 件（売買停止/出来高なし等）",
-    "reason": "売買停止・出来高なし等の個別銘柄（全体の5%未満）"
-   },
-   {
     "category": "注意",
-    "text": "取得間で値が修正された(code,date) 28 件（分割調整等。初回値は first_* に保持）",
-    "reason": "分割・併合パターン（TDnet 未確認・取り込み時に yfinance で確認）1銘柄（比率 ×10） / 株式分割・併合（TDnet 確認済み）2銘柄（比率 ×0.5） / 上場廃止銘柄の遡及補正 10行（予測対象外）。初回値は保持"
+    "text": "取得間で値が修正された(code,date) 29 件（分割調整等。初回値は first_* に保持）",
+    "reason": "分割・併合パターン（TDnet 未確認・取り込み時に yfinance で確認）1銘柄（比率 ×10） / 株式分割・併合（TDnet 確認済み）3銘柄（比率 ×0.2・×0.5） / 上場廃止銘柄の遡及補正 10行（予測対象外）。初回値は保持"
    },
    {
     "category": "注意",
@@ -465,11 +454,16 @@
     "reason": "EDINET が書類本文を提供していない（404）。保存せず次回再試行。株価データ・予測には影響なし"
    },
    {
-    "category": "要確認",
-    "text": "EDINET S",
-    "reason": "未分類の警告"
+    "category": "注意",
+    "text": "EDINET S100MIZT: zipでない応答",
+    "reason": "EDINET が書類本文を提供していない（404）。保存せず次回再試行。株価データ・予測には影響なし"
+   },
+   {
+    "category": "注意",
+    "text": "EDINET S100MEM8: zipでない応答",
+    "reason": "EDINET が書類本文を提供していない（404）。保存せず次回再試行。株価データ・予測には影響なし"
    }
   ]
  },
- "content_sha256": "592b4e33c5ebbac65c999ae4e99b5f814d5e8704de11e1817451d787fc5219ae"
+ "content_sha256": "77632830e9ef7b3fb07a9a3bd455ba38af54b4eb4cea84d71c7e0c1af20de6e8"
 }
