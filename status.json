@@ -1,14 +1,15 @@
 {
  "schema": "kabu-ai-status/1",
  "scope": "P1（システム稼働状況のみ。銘柄・候補は掲載しません）",
- "generated_at": "2026-11-19 17:12:26",
+ "generated_at": "2026-11-19 19:13:15",
  "collector": {
   "status": "WARN",
-  "last_finished": "2026-11-19 07:50",
+  "last_finished": "2026-11-19 18:49",
   "stale_hours_threshold": 15,
   "issues": [],
   "warnings": [
-   "取得間で値が修正された(code,date) 29 件（分割調整等。初回値は first_* に保持）",
+   "最新営業日 2026-11-19 のデータが無い銘柄 42 件（売買停止/出来高なし等）",
+   "取得間で値が修正された(code,date) 34 件（分割調整等。初回値は first_* に保持）",
    "EDINET S100MGNN: zipでない応答",
    "EDINET S100MEGM: zipでない応答",
    "EDINET S100MGOT: zipでない応答",
@@ -16,6 +17,10 @@
    "EDINET S100MEM8: zipでない応答"
   ],
   "recent": [
+   {
+    "at": "2026-11-19 18:30",
+    "status": "WARN"
+   },
    {
     "at": "2026-11-19 07:30",
     "status": "WARN"
@@ -43,26 +48,22 @@
    {
     "at": "2026-11-16 07:30",
     "status": "WARN"
-   },
-   {
-    "at": "2026-11-15 18:30",
-    "status": "WARN"
    }
   ]
  },
  "data": {
-  "price_last_date": "2026-11-18",
+  "price_last_date": "2026-11-19",
   "universe_codes": 3719
  },
  "forward": {
   "FWD1": {
-   "matured": 7,
+   "matured": 8,
    "required": 250
   },
   "FWD2": {
    "matured": 0,
    "required": 250,
-   "recorded": 26
+   "recorded": 27
   },
   "note": "20営業日保有の検証のため、最初の確定は FWD1 11/10・FWD2 11/12 の株価確定後（翌朝）。それまで 0 は正常（評価日未到来）"
  },
@@ -73,7 +74,7 @@
  },
  "edinet": {
   "docs_pending": 121,
-  "docs_saved_last_run": 295
+  "docs_saved_last_run": 0
  },
  "notice": "研究用システムの稼働状況です。投資助言・銘柄推奨ではありません。",
  "verification": {
@@ -430,12 +431,17 @@
   "market_today": "営業日",
   "last_trading_day": "2026-11-19",
   "next_trading_day": "2026-11-20",
-  "expected_price_date": "2026-11-18",
+  "expected_price_date": "2026-11-19",
   "price_freshness": "最新",
   "items": [
    {
+    "category": "情報",
+    "text": "最新営業日 2026-11-19 のデータが無い銘柄 42 件（売買停止/出来高なし等）",
+    "reason": "売買停止・出来高なし等の個別銘柄（全体の5%未満）"
+   },
+   {
     "category": "注意",
-    "text": "取得間で値が修正された(code,date) 29 件（分割調整等。初回値は first_* に保持）",
+    "text": "取得間で値が修正された(code,date) 34 件（分割調整等。初回値は first_* に保持）",
     "reason": "分割・併合パターン（TDnet 未確認・取り込み時に yfinance で確認）1銘柄（比率 ×10） / 株式分割・併合（TDnet 確認済み）3銘柄（比率 ×0.2・×0.5） / 上場廃止銘柄の遡及補正 10行（予測対象外）。初回値は保持"
    },
    {
@@ -465,5 +471,5 @@
    }
   ]
  },
- "content_sha256": "9da825d1aec036ed32c7e90af50fb2610db6d9ef1ba46c21c2daad55705f51cf"
+ "content_sha256": "d952feb62352bc15f7f1503e6505c6701bdf6d4d74aa1e0ec145a08983a0768a"
 }
